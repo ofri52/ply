@@ -283,6 +283,7 @@ article{
   padding: 10px;
   text-align: left;
   font-family: monospace;
+  margin: 20px;
 }
 article ul{ list-style-type: disc;}
 article h1{
