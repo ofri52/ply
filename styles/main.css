@@ -292,3 +292,7 @@ article h1{
   padding: 0;
   margin: 0;
 }
+article video{
+  width: 90%;
+  margin-top: 25px;
+}
