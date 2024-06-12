@@ -255,21 +255,27 @@ form .submit-btn:hover{
 
 
 /*Footer and info page*/
-footer , main.info{
+footer , main.info, main.notfound{
   align-items: center;
   justify-content: center;
-  background-color: #383838;
   text-align: center;
-  color: #fff;
   padding: 20px 200px;
   margin: 0;
   margin-top: 50px;
+  color: #fff;
+}
+main.notfound{
+  margin-top: 7.5%;
+  margin-bottom: 15%;
+}
+footer , main.info{
+  background-color: #383838;
 }
 footer h3, main.info h3{ font-size: 25px;}
-footer a, main.info a{
+footer a, main.info a, main.notfound a{
   color: #0084ff;
 }
-main.info img{
+main.info img, main.notfound img{
   margin: 40px;
 }
 
