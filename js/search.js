@@ -1,17 +1,12 @@
 function searching(input) {
     input.classList.add("active");
-    var input, filter, ul, li, a, i, txtValue;
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("search-results");
-    li = ul.getElementsByTagName("div");
-    for (i = 0; i < li.length; i++) {
-        a = li[i];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
+    const filter = input.value.toUpperCase();
+    const search_results = document.getElementById("search-results");
+    const gamelinks = search_results.getElementsByTagName("a");
+    for (const gl of gamelinks) {
+        var txtValue = gl.textContent || gl.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) gl.style.display = "";
+        else gl.style.display = "none";
     }
 }
 
