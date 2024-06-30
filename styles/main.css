@@ -1,7 +1,21 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-ExtraLight.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/FiraSans-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FiraSans-ExtraLight.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/FiraSans-ExtraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/FiraSans-ExtraLight.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
+
 body {
-  background-color: #1c1c1d;
+  background: url("../img/bg.png") repeat;
+  background-size: 5%;
+  background-color: rgba(20,20,20, .85);
+  background-blend-mode: multiply;
   color: #c9c9c9;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", sans-serif;
   max-width: 100%;
   overflow-x: hidden;
   padding: 0;
@@ -12,7 +26,7 @@ body a{ text-decoration: none}
 
 
 body::-webkit-scrollbar-track{
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 3px rgba(0,0,0,.3);
   background-color: #777777;
 }
 body::-webkit-scrollbar{
@@ -31,15 +45,16 @@ header {
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #333;
+  background: linear-gradient(#444, #222);
   overflow: hidden;
   height: 71px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
 }
 header a {
-  transition: all 0.2s ease;
+  transition: all .2s ease;
   float: left;
   color: #c9c9c9;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #222;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -70,6 +85,7 @@ header a {
 header a:hover {
   border-bottom: 1px solid #fff;
   color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255, .5);
 }
 
 
@@ -105,7 +121,7 @@ main hr{ margin: 30px 0px;}
 
 
 .hor-scroll {
-  transition: left .2s ease;
+  transition: left .5s ease;
   white-space: nowrap;
   height: fit-content;
   position:relative;
@@ -139,7 +155,7 @@ main hr{ margin: 30px 0px;}
   background-color: #1f1f1e;
 }
 .scroller:hover{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, .2);
   cursor: pointer;
 }
 .inc-hs{float:right}
@@ -151,25 +167,27 @@ main hr{ margin: 30px 0px;}
   text-align: center;
   display: block;
   color: #c9c9c9;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
   border-radius: 10px;
   font-size: 10px;
   overflow: hidden;
   white-space: nowrap;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
   width: 180px;
 }
 .game-tile:hover {
   transform: scale(1.1);
-  color: #fff
+  color: #fff;
+  box-shadow: 0 2px 5px black;
+  text-shadow: 0 0 5px rgba(255,255,255, .5);
 }
-.game-icon {
+.game-tile img{
   width: 100%;
   height:180px;
 }
-.html5 {background-color: #333;}
-.emulator {background-color: #004f74;}
-.flash {background-color: #540000;}
+.html5 {background: linear-gradient(rgba(61, 61, 61, 1) 78%, rgba(51, 51, 51, .3));}
+.emulator {background: linear-gradient(rgba(0, 89, 126, 1) 78%, rgba(0, 79, 116, .3));}
+.flash {background: linear-gradient(rgba(104, 0, 0, 1) 78%, rgba(94, 0, 0, .3));}
 
 
 
@@ -189,7 +207,7 @@ form{
 }
 form *{
   border-radius: 10px;
-  border-width: 3px;
+  border-width: 0;
 }
 form h2{
   margin: 0;  
@@ -215,9 +233,10 @@ form .contact{
 }
 form .submit-btn{
   display: block;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
   color: #f5f5f5;
-  background-color: #1c1c1d;
+  background: linear-gradient(rgba(80,80,80, .7), rgba(65,65,65, .5));
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
   margin-top: 40px;
   font-size: 25px;
   height: 40px;
@@ -226,6 +245,9 @@ form .submit-btn{
 form .submit-btn:hover{
   transform: scale(1.1);
   cursor: pointer;
+  color: #fff;
+  box-shadow: 0 2px 5px black;
+  text-shadow: 0 0 5px rgba(255,255,255, .5);
 }
 
 
@@ -270,11 +292,17 @@ main.notfound{
   margin-bottom: 15%;
 }
 footer{
-  background-color: #383838;
+  background-color: rgba(56,56,56, .7);
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, .2);
 }
 footer h3, main.info h3{ font-size: 25px;}
 footer a, main.info a, main.notfound a{
   color: #0084ff;
+  transition: all .2s ease;
+}
+footer a:hover, main.info a:hover, main.notfound a:hover{
+  color: #20b4ff;
+  text-shadow: 0 0 5px #0084ff;
 }
 main.info img, main.notfound img{
   margin: 40px;
@@ -284,18 +312,18 @@ main.info img, main.notfound img{
 
 /*Used for patch-notes*/
 article{
-  background-color: #1f1f1e;
+  background: linear-gradient(rgba(40,40,40, .7), rgba(25,25,25, .5));
   width: fit-content;
   border-radius: 10px;
   padding: 10px;
   text-align: left;
-  font-family: monospace;
   margin: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
 }
 article ul{
   list-style-type: disc;
   color: #c9c9c9;
+  font-family: monospace;
 }
 article h1{
   text-align: center;
