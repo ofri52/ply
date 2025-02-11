@@ -317,8 +317,8 @@ main.info img, main.notfound img{
   justify-content: center;
   align-items: center;
   min-width: 500px; /*ads must be >250px wide*/
-  width: fit-content;
-  height: fit-content;
+  width: 80vw;
+  height: 200px;
 }
 
 
