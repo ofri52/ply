@@ -310,6 +310,19 @@ main.info img, main.notfound img{
 
 
 
+/*Ads related*/
+.ad-space{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 500px; /*ads must be >250px wide*/
+  width: 80vw;
+  height: 200px;
+}
+
+
+
 /*Used for patch-notes*/
 article{
   background: linear-gradient(rgba(40,40,40, .7), rgba(25,25,25, .5));
