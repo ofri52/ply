@@ -316,8 +316,7 @@ main.info img, main.notfound img{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-width: 500px; /*ads must be >250px wide*/
-  width: 80vw;
+  width: 500px;
   height: 200px;
 }
 
